@@ -204,13 +204,13 @@ export class CLIPTokenizer extends PreTrainedTokenizer {
     }
 
     // Optional post-processing
-    modelInputs = this.prepare_model_inputs(modelInputs)
+    // modelInputs = this.prepare_model_inputs(modelInputs)
 
     return modelInputs
   }
 
   _encode_text (text: string|null): string[] | null {
-    if (text === null) {
+    if (text === null || text === undefined) {
       return []
     }
 
